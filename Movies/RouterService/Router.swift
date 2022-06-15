@@ -14,7 +14,7 @@ class Router :  NSObject {
     private let sourcesURL = URL(string: "http://www.omdbapi.com")!
     
     func getAllMovies_API( searchKey : String?, completion : @escaping (Movie) -> ()){
-        // To show results for the first time. No data exist search text is empty.
+        // To show results for the first time. No response is coming if search text is empty.
         var searchText = "marvel"
         if searchKey != nil && searchKey != "" {
             searchText = searchKey!
